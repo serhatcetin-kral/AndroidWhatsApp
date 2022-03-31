@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         myTablayout=findViewById(R.id.ana_sekmeler);
         myTablayout.setupWithViewPager(myViewPager);
 
-
+// bu deneme icin
 
     }
 }
