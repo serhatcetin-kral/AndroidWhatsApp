@@ -1,0 +1,855 @@
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.example.whatsapp\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.WhatsApp\">\r\n        <activity\r\n            android:name=\".KayitAktivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".LoginActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision d2e23d8c0a0dbb64bd10f12865dfddc33d4da82b)
++++ b/app/src/main/AndroidManifest.xml	(date 1649752762256)
+@@ -2,6 +2,8 @@
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     package="com.example.whatsapp">
+ 
++    <uses-permission android:name="android.permission.INTERNET" />
++
+     <application
+         android:allowBackup="true"
+         android:icon="@mipmap/ic_launcher"
+@@ -9,6 +11,9 @@
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+         android:theme="@style/Theme.WhatsApp">
++        <activity
++            android:name=".AyarlarAktivitiy"
++            android:exported="false" />
+         <activity
+             android:name=".KayitAktivity"
+             android:exported="false" />
+Index: app/src/main/res/drawable/ic_note.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_note.xml b/app/src/main/res/drawable/ic_note.xml
+new file mode 100644
+--- /dev/null	(date 1649768135111)
++++ b/app/src/main/res/drawable/ic_note.xml	(date 1649768135111)
+@@ -0,0 +1,5 @@
++<vector android:height="24dp" android:tint="#6AD25E"
++    android:viewportHeight="24" android:viewportWidth="24"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="@android:color/white" android:pathData="M17,10L7,10v2h10v-2zM19,3h-1L18,1h-2v2L8,3L8,1L6,1v2L5,3c-1.11,0 -1.99,0.9 -1.99,2L3,19c0,1.1 0.89,2 2,2h14c1.1,0 2,-0.9 2,-2L21,5c0,-1.1 -0.9,-2 -2,-2zM19,19L5,19L5,8h14v11zM14,14L7,14v2h7v-2z"/>
++</vector>
+Index: app/src/main/res/drawable/ic_baseline_people_alt_24.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_baseline_people_alt_24.xml b/app/src/main/res/drawable/ic_baseline_people_alt_24.xml
+new file mode 100644
+--- /dev/null	(date 1649766667617)
++++ b/app/src/main/res/drawable/ic_baseline_people_alt_24.xml	(date 1649766667617)
+@@ -0,0 +1,12 @@
++<vector android:height="24dp" android:tint="#6AD25E"
++    android:viewportHeight="24" android:viewportWidth="24"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="@android:color/white"
++        android:fillType="evenOdd" android:pathData="M16.67,13.13C18.04,14.06 19,15.32 19,17v3h4v-3C23,14.82 19.43,13.53 16.67,13.13z"/>
++    <path android:fillColor="@android:color/white"
++        android:fillType="evenOdd" android:pathData="M9,8m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
++    <path android:fillColor="@android:color/white"
++        android:fillType="evenOdd" android:pathData="M15,12c2.21,0 4,-1.79 4,-4c0,-2.21 -1.79,-4 -4,-4c-0.47,0 -0.91,0.1 -1.33,0.24C14.5,5.27 15,6.58 15,8s-0.5,2.73 -1.33,3.76C14.09,11.9 14.53,12 15,12z"/>
++    <path android:fillColor="@android:color/white"
++        android:fillType="evenOdd" android:pathData="M9,13c-2.67,0 -8,1.34 -8,4v3h16v-3C17,14.34 11.67,13 9,13z"/>
++</vector>
+Index: app/src/main/res/drawable/ic_personsearch.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_personsearch.xml b/app/src/main/res/drawable/ic_personsearch.xml
+new file mode 100644
+--- /dev/null	(date 1649767417877)
++++ b/app/src/main/res/drawable/ic_personsearch.xml	(date 1649767417877)
+@@ -0,0 +1,7 @@
++<vector android:height="24dp" android:tint="#6AD25E"
++    android:viewportHeight="24" android:viewportWidth="24"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="@android:color/white" android:pathData="M10,8m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
++    <path android:fillColor="@android:color/white" android:pathData="M10.35,14.01C7.62,13.91 2,15.27 2,18v2h9.54C9.07,17.24 10.31,14.11 10.35,14.01z"/>
++    <path android:fillColor="@android:color/white" android:pathData="M19.43,18.02C19.79,17.43 20,16.74 20,16c0,-2.21 -1.79,-4 -4,-4s-4,1.79 -4,4c0,2.21 1.79,4 4,4c0.74,0 1.43,-0.22 2.02,-0.57L20.59,22L22,20.59L19.43,18.02zM16,18c-1.1,0 -2,-0.9 -2,-2c0,-1.1 0.9,-2 2,-2s2,0.9 2,2C18,17.1 17.1,18 16,18z"/>
++</vector>
+Index: app/src/main/java/com/example/whatsapp/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.whatsapp;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport androidx.appcompat.widget.Toolbar;\r\nimport androidx.viewpager.widget.ViewPager;\r\n\r\nimport android.os.Bundle;\r\nimport android.widget.TableLayout;\r\n\r\nimport com.google.android.material.tabs.TabLayout;\r\n\r\npublic class MainActivity extends AppCompatActivity {\r\n\r\n    private Toolbar mToolbar;\r\n    private ViewPager myViewPager;\r\n    private TabLayout myTablayout;\r\n    private SekmeErisimAdabtor mySekmeErisimAdabtor;\r\n\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_main);\r\n\r\n        mToolbar=findViewById(R.id.ana_sayfa_toolbar); //aktive icin kutuphane ekleyebilirsin videoya bak 7 .dk sonra kutuphane eklemedim\r\n        setSupportActionBar(mToolbar);\r\n        getSupportActionBar().setTitle(\"WhatsApp\");\r\n\r\n\r\n        myViewPager=findViewById(R.id.ana_sekmeler_pager);\r\n        mySekmeErisimAdabtor=new SekmeErisimAdabtor(getSupportFragmentManager());\r\n        myViewPager.setAdapter(mySekmeErisimAdabtor);\r\n        myTablayout=findViewById(R.id.ana_sekmeler);\r\n        myTablayout.setupWithViewPager(myViewPager);\r\n\r\n// bu deneme icin\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/whatsapp/MainActivity.java b/app/src/main/java/com/example/whatsapp/MainActivity.java
+--- a/app/src/main/java/com/example/whatsapp/MainActivity.java	(revision d2e23d8c0a0dbb64bd10f12865dfddc33d4da82b)
++++ b/app/src/main/java/com/example/whatsapp/MainActivity.java	(date 1649842375212)
+@@ -1,13 +1,19 @@
+ package com.example.whatsapp;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ import androidx.appcompat.widget.Toolbar;
+ import androidx.viewpager.widget.ViewPager;
+ 
++import android.content.Intent;
+ import android.os.Bundle;
+-import android.widget.TableLayout;
++import android.view.Menu;
++import android.view.MenuItem;
++
+ 
+ import com.google.android.material.tabs.TabLayout;
++import com.google.firebase.auth.FirebaseAuth;
++import com.google.firebase.auth.FirebaseUser;
+ 
+ public class MainActivity extends AppCompatActivity {
+ 
+@@ -15,7 +21,10 @@
+     private ViewPager myViewPager;
+     private TabLayout myTablayout;
+     private SekmeErisimAdabtor mySekmeErisimAdabtor;
++    private FirebaseUser mevcutKullanici;// bunuda ekledin
+ 
++
++    private FirebaseAuth mYetki;
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+@@ -33,7 +42,54 @@
+         myTablayout=findViewById(R.id.ana_sekmeler);
+         myTablayout.setupWithViewPager(myViewPager);
+ 
+-// bu deneme icin
++        //firebase
++        mYetki=FirebaseAuth.getInstance();
++        mevcutKullanici=mYetki.getCurrentUser();
++    }
++//bundan sonrasini ekledin
++        @Override
++        protected void onStart() {
++            super.onStart();
++            if(mevcutKullanici==null){
++                KullaniciyiLoginAktivityeGonder();
++            }
++        }
++
++        private void KullaniciyiLoginAktivityeGonder(){
++            Intent AnaAktiviteIntent=new Intent(MainActivity.this,LoginActivity.class);
++            startActivity(AnaAktiviteIntent);
++        }
++
++
++    @Override
++    public boolean onCreateOptionsMenu(Menu menu) {
++         super.onCreateOptionsMenu(menu);
++
++    getMenuInflater().inflate(R.menu.secenekler_menu,menu);
+ 
++        return true;
++
+     }
+-}
+\ No newline at end of file
++
++    @Override
++    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
++        super.onOptionsItemSelected(item);
++        if(item.getItemId()==R.id.ana_arkadas_bulma_secenegi){
++
++
++        }
++        if(item.getItemId()==R.id.ana_ayarlar_secenegi){
++            Intent ayar=new Intent(MainActivity.this,AyarlarAktivitiy.class);
++            startActivity(ayar);
++        }
++
++
++        if(item.getItemId()==R.id.ana_cikis_secenegi){
++
++   mYetki.signOut();
++   Intent giris=new Intent(MainActivity.this,LoginActivity.class);
++   startActivity(giris);
++        }
++        return  true;
++    }
++}
+Index: app/src/main/java/com/example/whatsapp/KayitAktivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.whatsapp;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.os.Bundle;\r\n\r\npublic class KayitAktivity extends AppCompatActivity {\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_kayit);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/whatsapp/KayitAktivity.java b/app/src/main/java/com/example/whatsapp/KayitAktivity.java
+--- a/app/src/main/java/com/example/whatsapp/KayitAktivity.java	(revision d2e23d8c0a0dbb64bd10f12865dfddc33d4da82b)
++++ b/app/src/main/java/com/example/whatsapp/KayitAktivity.java	(date 1649750327008)
+@@ -1,14 +1,125 @@
+ package com.example.whatsapp;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.app.ProgressDialog;
++import android.content.Intent;
+ import android.os.Bundle;
++import android.text.TextUtils;
++import android.view.View;
++import android.widget.Button;
++import android.widget.EditText;
++import android.widget.TextView;
++import android.widget.Toast;
++
++import com.google.android.gms.tasks.OnCompleteListener;
++import com.google.android.gms.tasks.Task;
++import com.google.firebase.auth.AuthResult;
++import com.google.firebase.auth.FirebaseAuth;
++import com.google.firebase.database.DatabaseReference;
++import com.google.firebase.database.FirebaseDatabase;
++import com.google.firebase.database.core.SyncTree;
++
+ 
+ public class KayitAktivity extends AppCompatActivity {
+ 
++private Button KayitOlusturmaButtonu;
++private EditText KullaniciMail,KullaniciSifre;
++private TextView ZatenHesabimVar;
++
++
++//firebase
++
++    private DatabaseReference kokReference;
++    private FirebaseAuth mYetki;
++    private ProgressDialog yukleniyorDialog;
++
++
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_kayit);
++
++        //FIREBASE
++        mYetki=FirebaseAuth.getInstance();
++        kokReference= FirebaseDatabase.getInstance().getReference();
++
++
++
++        //kontrol tanimlamalari
++        KayitOlusturmaButtonu = findViewById(R.id.kayit_butonu);
++        KullaniciMail = findViewById(R.id.kayit_email);
++        KullaniciSifre = findViewById(R.id.kayit_sifre);
++        ZatenHesabimVar = findViewById(R.id.zaten_hesap_var);
++        yukleniyorDialog=new ProgressDialog(this);
++
++        ZatenHesabimVar.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                Intent loginActivityIntent = new Intent(KayitAktivity.this, LoginActivity.class);
++                startActivity(loginActivityIntent);
++            }
++        });
++
++
++        KayitOlusturmaButtonu.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++
++
++                YeniHesapOlustur();
++
++
++            }
++
++
++        });
++    }
++
++        private void YeniHesapOlustur(){
++            String email=KullaniciMail.getText().toString();
++            String sifre=KullaniciSifre.getText().toString();
++            if(TextUtils.isEmpty(email)){
++                Toast.makeText(this,"enter a valid email",Toast.LENGTH_LONG).show();
++            }
++
++            if(TextUtils.isEmpty(sifre)){
++                Toast.makeText(this,"enter a valid password",Toast.LENGTH_LONG).show();
++            }
++            else {
++                yukleniyorDialog.setTitle("creating new account");
++                yukleniyorDialog.setMessage("please wait");
++                yukleniyorDialog.setCanceledOnTouchOutside(true);
++                yukleniyorDialog.show();
++
++                mYetki.createUserWithEmailAndPassword(email,sifre).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
++                    @Override
++                    public void onComplete(@NonNull Task<AuthResult> task) {
++
++                        if(task.isSuccessful()){
++                            String mencutKullaniciId=mYetki.getCurrentUser().getUid();
++                            kokReference.child("Kullanicilar").child(mencutKullaniciId).setValue("");
++                            Intent anasayfa=new Intent(KayitAktivity.this,MainActivity.class);
++                            anasayfa.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
++                            startActivity(anasayfa);
++                            finish();
++                            Toast.makeText(KayitAktivity.this, "new account add successfully", Toast.LENGTH_SHORT).show();
++                            yukleniyorDialog.dismiss();
++                        }
++                        else {
++
++                            String mesaj=task.getException().toString();
++                            Toast.makeText(KayitAktivity.this, "mistake :"+mesaj+" check your info", Toast.LENGTH_SHORT).show();
++                            yukleniyorDialog.dismiss();
++
++
++
++                        }
++                        
++                    }
++                });
++            }
++        }
++
+     }
+-}
+\ No newline at end of file
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>buildscript {\r\n    dependencies {\r\n        classpath 'com.google.gms:google-services:4.3.10'\r\n    }\r\n}// Top-level build file where you can add configuration options common to all sub-projects/modules.\r\nplugins {\r\n    id 'com.android.application' version '7.1.2' apply false\r\n    id 'com.android.library' version '7.1.2' apply false\r\n}\r\n\r\ntask clean(type: Delete) {\r\n    delete rootProject.buildDir\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	(revision d2e23d8c0a0dbb64bd10f12865dfddc33d4da82b)
++++ b/build.gradle	(date 1649406446889)
+@@ -4,8 +4,8 @@
+     }
+ }// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ plugins {
+-    id 'com.android.application' version '7.1.2' apply false
+-    id 'com.android.library' version '7.1.2' apply false
++    id 'com.android.application' version '7.1.3' apply false
++    id 'com.android.library' version '7.1.3' apply false
+ }
+ 
+ task clean(type: Delete) {
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".MainActivity\"\r\n    android:background=\"@color/white\"\r\n    >\r\n\r\n\r\n    <com.google.android.material.appbar.AppBarLayout\r\n        android:id=\"@+id/appBarLayout\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\">\r\n        //app bar\r\n        <include\r\n            android:id=\"@+id/ana_sayfa_toolbar\"\r\n            layout=\"@layout/app_bar_layout\"\r\n            >\r\n\r\n        </include>\r\n        //sekme\r\n\r\n\r\n\r\n        <com.google.android.material.tabs.TabLayout\r\n            android:id=\"@+id/ana_sekmeler\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:theme=\"@style/ThemeOverlay.AppCompat.Dark.ActionBar\"></com.google.android.material.tabs.TabLayout>\r\n    </com.google.android.material.appbar.AppBarLayout>\r\n\r\n<androidx.viewpager.widget.ViewPager\r\n    android:id=\"@+id/ana_sekmeler_pager\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"wrap_content\"\r\n    android:layout_below=\"@+id/appBarLayout\"\r\n    ></androidx.viewpager.widget.ViewPager>\r\n\r\n\r\n</RelativeLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision d2e23d8c0a0dbb64bd10f12865dfddc33d4da82b)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1649313899204)
+@@ -32,12 +32,11 @@
+             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></com.google.android.material.tabs.TabLayout>
+     </com.google.android.material.appbar.AppBarLayout>
+ 
+-<androidx.viewpager.widget.ViewPager
+-    android:id="@+id/ana_sekmeler_pager"
+-    android:layout_width="match_parent"
+-    android:layout_height="wrap_content"
+-    android:layout_below="@+id/appBarLayout"
+-    ></androidx.viewpager.widget.ViewPager>
++    <androidx.viewpager.widget.ViewPager
++        android:id="@+id/ana_sekmeler_pager"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_below="@+id/appBarLayout"></androidx.viewpager.widget.ViewPager>
+ 
+ 
+ </RelativeLayout>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/buttonlar.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/girdiler.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/ic_baseline_phone_android_24.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/ic_baseline_vpn_key_24.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/ic_launcher_background.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/activity_kayit.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/activity_kayit_aktivity.xml\" value=\"0.25052083333333336\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/activity_login.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/activity_main.xml\" value=\"0.264\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/app_bar_layout.xml\" value=\"0.25052083333333336\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/fragment_chat.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/fragment_gruplar.xml\" value=\"0.25052083333333336\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/fragment_kisiler.xml\" value=\"0.25052083333333336\" />\r\n        <entry key=\"..\\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/fragment_login_activity.xml\" value=\"0.25052083333333336\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"Android Studio default JDK\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision d2e23d8c0a0dbb64bd10f12865dfddc33d4da82b)
++++ b/.idea/misc.xml	(date 1649768206938)
+@@ -3,21 +3,30 @@
+   <component name="DesignSurface">
+     <option name="filePathToZoomLevelMap">
+       <map>
++        <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.183" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/buttonlar.xml" value="0.1" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/girdiler.xml" value="0.1" />
++        <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.183" />
++        <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/ic_baseline_lock_open_24.xml" value="0.183" />
++        <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/ic_baseline_people_alt_24.xml" value="0.183" />
++        <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/ic_baseline_person_search_24.xml" value="0.183" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/ic_baseline_phone_android_24.xml" value="0.1" />
++        <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/ic_baseline_phone_iphone_24.xml" value="0.183" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/ic_baseline_vpn_key_24.xml" value="0.1" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
++        <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/drawable/ic_personsearch.xml" value="0.183" />
++        <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/activity_ayarlar_aktivitiy.xml" value="0.25052083333333336" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/activity_kayit.xml" value="0.1" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/activity_kayit_aktivity.xml" value="0.25052083333333336" />
+-        <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/activity_login.xml" value="0.1" />
++        <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/activity_login.xml" value="0.2" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/app_bar_layout.xml" value="0.25052083333333336" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/fragment_chat.xml" value="0.1" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/fragment_gruplar.xml" value="0.25052083333333336" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/fragment_kisiler.xml" value="0.25052083333333336" />
+         <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/layout/fragment_login_activity.xml" value="0.25052083333333336" />
++        <entry key="..\:/Users/DELL/AndroidStudioProjects/WhatsApp/app/src/main/res/menu/secenekler_menu.xml" value="0.25052083333333336" />
+       </map>
+     </option>
+   </component>
+Index: .idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetDropDown\">\r\n    <targetSelectedWithDropDown>\r\n      <Target>\r\n        <type value=\"QUICK_BOOT_TARGET\" />\r\n        <deviceKey>\r\n          <Key>\r\n            <type value=\"VIRTUAL_DEVICE_PATH\" />\r\n            <value value=\"C:\\Users\\DELL\\.android\\avd\\firebaseCRUD.avd\" />\r\n          </Key>\r\n        </deviceKey>\r\n      </Target>\r\n    </targetSelectedWithDropDown>\r\n    <timeTargetWasSelectedWithDropDown value=\"2022-04-05T10:10:57.302566Z\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/deploymentTargetDropDown.xml b/.idea/deploymentTargetDropDown.xml
+--- a/.idea/deploymentTargetDropDown.xml	(revision d2e23d8c0a0dbb64bd10f12865dfddc33d4da82b)
++++ b/.idea/deploymentTargetDropDown.xml	(date 1649849721196)
+@@ -7,11 +7,11 @@
+         <deviceKey>
+           <Key>
+             <type value="VIRTUAL_DEVICE_PATH" />
+-            <value value="C:\Users\DELL\.android\avd\firebaseCRUD.avd" />
++            <value value="C:\Users\DELL\.android\avd\Pixel_2_XL_API_29_6.avd" />
+           </Key>
+         </deviceKey>
+       </Target>
+     </targetSelectedWithDropDown>
+-    <timeTargetWasSelectedWithDropDown value="2022-04-05T10:10:57.302566Z" />
++    <timeTargetWasSelectedWithDropDown value="2022-04-13T11:35:08.397682900Z" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: app/release/output-metadata.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/release/output-metadata.json b/app/release/output-metadata.json
+new file mode 100644
+--- /dev/null	(date 1649240074949)
++++ b/app/release/output-metadata.json	(date 1649240074949)
+@@ -0,0 +1,20 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "APK",
++    "kind": "Directory"
++  },
++  "applicationId": "com.example.whatsapp",
++  "variantName": "release",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "versionCode": 1,
++      "versionName": "1.0",
++      "outputFile": "app-release.apk"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+Index: app/src/main/res/drawable-anydpi/ic_action_name.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable-anydpi/ic_action_name.xml b/app/src/main/res/drawable-anydpi/ic_action_name.xml
+new file mode 100644
+--- /dev/null	(date 1649765741631)
++++ b/app/src/main/res/drawable-anydpi/ic_action_name.xml	(date 1649765741631)
+@@ -0,0 +1,11 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="24dp"
++    android:height="24dp"
++    android:viewportWidth="24"
++    android:viewportHeight="24"
++    android:tint="#333333"
++    android:alpha="0.6">
++  <path
++      android:fillColor="@android:color/white"
++      android:pathData="M12,5.9c1.16,0 2.1,0.94 2.1,2.1s-0.94,2.1 -2.1,2.1S9.9,9.16 9.9,8s0.94,-2.1 2.1,-2.1m0,9c2.97,0 6.1,1.46 6.1,2.1v1.1L5.9,18.1L5.9,17c0,-0.64 3.13,-2.1 6.1,-2.1M12,4C9.79,4 8,5.79 8,8s1.79,4 4,4 4,-1.79 4,-4 -1.79,-4 -4,-4zM12,13c-2.67,0 -8,1.34 -8,4v3h16v-3c0,-2.66 -5.33,-4 -8,-4z"/>
++</vector>
+Index: app/src/main/java/com/example/whatsapp/AyarlarAktivitiy.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/whatsapp/AyarlarAktivitiy.java b/app/src/main/java/com/example/whatsapp/AyarlarAktivitiy.java
+new file mode 100644
+--- /dev/null	(date 1649842484935)
++++ b/app/src/main/java/com/example/whatsapp/AyarlarAktivitiy.java	(date 1649842484935)
+@@ -0,0 +1,27 @@
++package com.example.whatsapp;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++import android.widget.Button;
++import android.widget.EditText;
++
++import de.hdodenhof.circleimageview.CircleImageView;
++
++public class AyarlarAktivitiy extends AppCompatActivity {
++
++private Button hesapAyarlariniGuncelleme;
++private EditText kullaniciAdi,kullaniciDurumu;
++private CircleImageView kullaniciProfilResmi;
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_ayarlar_aktivitiy);
++  //kontrol ayarlari
++   hesapAyarlariniGuncelleme=findViewById(R.id.ayarlari_guncelleme_butonu);
++   kullaniciAdi=findViewById(R.id.kulanici_adi_ayarla);
++  kullaniciDurumu=findViewById(R.id.profil_durumu_ayarla);
++ kullaniciProfilResmi=findViewById(R.id.profil_resmi_ayarla);
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_ayarlar_aktivitiy.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_ayarlar_aktivitiy.xml b/app/src/main/res/layout/activity_ayarlar_aktivitiy.xml
+new file mode 100644
+--- /dev/null	(date 1649841829091)
++++ b/app/src/main/res/layout/activity_ayarlar_aktivitiy.xml	(date 1649841829091)
+@@ -0,0 +1,74 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".AyarlarAktivitiy">
++
++    
++    <de.hdodenhof.circleimageview.CircleImageView
++        android:id="@+id/profil_resmi_ayarla"
++        android:layout_width="240dp"
++        android:layout_height="240dp"
++        android:src="@drawable/profil_resmi"
++        app:civ_border_width="2dp"
++        app:civ_border_color="#002AFF"
++        android:layout_alignParentTop="true"
++        android:layout_centerHorizontal="true"
++        android:layout_marginTop="35dp"
++        />
++
++    <EditText
++        android:layout_width="400dp"
++        android:layout_height="55dp"
++        android:id="@+id/kulanici_adi_ayarla"
++        android:layout_below="@+id/profil_resmi_ayarla"
++        android:layout_marginTop="20dp"
++        android:inputType="textMultiLine"
++        android:hint="user name"
++        android:textAlignment="center"
++        android:drawableStart="@drawable/ic_personsearch"
++        android:layout_marginLeft="5dp"
++   android:textStyle="bold"
++        android:background="@drawable/girdiler"
++ android:paddingLeft="5dp"
++
++        />
++    <EditText
++        android:layout_width="400dp"
++        android:layout_height="55dp"
++        android:id="@+id/profil_durumu_ayarla"
++        android:layout_below="@+id/kulanici_adi_ayarla"
++        android:layout_marginTop="20dp"
++        android:inputType="textMultiLine"
++        android:hint="hi now i am using whatsApp"
++        android:textAlignment="center"
++        android:drawableStart="@drawable/ic_note"
++        android:layout_marginLeft="5dp"
++        android:textStyle="bold"
++        android:background="@drawable/girdiler"
++        android:paddingLeft="5dp"
++
++        />
++
++    <Button
++        android:id="@+id/ayarlari_guncelleme_butonu"
++        android:layout_width="400dp"
++        android:layout_height="55dp"
++        android:layout_below="@+id/profil_durumu_ayarla"
++        android:layout_marginLeft="5dp"
++        android:layout_marginTop="20dp"
++        android:background="@drawable/buttonlar"
++  android:textColor="@color/cardview_light_background"
++        android:inputType="textMultiLine"
++        android:paddingLeft="5dp"
++        android:text="UPDATE"
++        android:textAlignment="center"
++        android:textStyle="bold"
++        android:textSize="24dp"
++
++        />
++    
++</RelativeLayout>
+\ No newline at end of file
+Index: app/src/main/res/menu/secenekler_menu.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/menu/secenekler_menu.xml b/app/src/main/res/menu/secenekler_menu.xml
+new file mode 100644
+--- /dev/null	(date 1649844484726)
++++ b/app/src/main/res/menu/secenekler_menu.xml	(date 1649844484726)
+@@ -0,0 +1,31 @@
++<?xml version="1.0" encoding="utf-8"?>
++<menu xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++
++    >
++
++
++    <item android:visible="true"
++        android:id="@+id/ana_arkadas_bulma_secenegi"
++        android:title="arkadas bul"
++        app:showAsAction="never"
++
++        >
++
++    </item>
++    <item
++        android:id="@+id/ana_ayarlar_secenegi"
++        android:title="ayarlar"
++        app:showAsAction="never"
++        >
++
++    </item>
++    <item
++        android:id="@+id/ana_cikis_secenegi"
++        android:title="cikis secenegi"
++        app:showAsAction="never"
++        >
++
++    </item>
++
++</menu>
+\ No newline at end of file
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'com.android.application'\r\n    id 'com.google.gms.google-services'\r\n}\r\n\r\nandroid {\r\n    compileSdk 31\r\n\r\n    defaultConfig {\r\n        applicationId \"com.example.whatsapp\"\r\n        minSdk 22\r\n        targetSdk 31\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility JavaVersion.VERSION_1_8\r\n        targetCompatibility JavaVersion.VERSION_1_8\r\n    }\r\n}\r\n\r\ndependencies {\r\n\r\n    implementation 'androidx.appcompat:appcompat:1.4.1'\r\n    implementation 'com.google.android.material:material:1.5.0'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'\r\n    implementation 'com.google.firebase:firebase-database:20.0.4'\r\n    implementation 'androidx.legacy:legacy-support-v4:1.0.0'\r\n    testImplementation 'junit:junit:4.13.2'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.3'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	(revision d2e23d8c0a0dbb64bd10f12865dfddc33d4da82b)
++++ b/app/build.gradle	(date 1649753166052)
+@@ -35,7 +35,16 @@
+     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+     implementation 'com.google.firebase:firebase-database:20.0.4'
+     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
++    implementation 'com.google.firebase:firebase-common-ktx:20.1.0'
+     testImplementation 'junit:junit:4.13.2'
+     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
++    implementation 'com.google.firebase:firebase-auth'
++
++    implementation platform('com.google.firebase:firebase-bom:29.3.0')
++    //yuvarlak resim icin
++
++    implementation 'de.hdodenhof:circleimageview:3.1.0'
++
++
+ }
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".LoginActivity\">\r\n\r\n    <ScrollView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\">\r\n\r\n        <RelativeLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\">\r\n\r\n            <ImageView\r\n                android:id=\"@+id/giris_resmi\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"250dp\"\r\n\r\n                android:layout_alignParentStart=\"true\"\r\n                android:layout_alignParentTop=\"true\"\r\n                android:scaleType=\"fitXY\"\r\n                android:src=\"@drawable/login\" />\r\n\r\n            <EditText\r\n                android:id=\"@+id/giris_email\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_below=\"@+id/giris_resmi\"\r\n                android:layout_alignParentStart=\"true\"\r\n                android:layout_marginStart=\"3dp\"\r\n                android:layout_marginLeft=\"15dp\"\r\n                android:layout_marginTop=\"24dp\"\r\n                android:layout_marginRight=\"15dp\"\r\n                android:background=\"@drawable/girdiler\"\r\n                android:drawableStart=\"@drawable/ic_baseline_email_24\"\r\n                android:hint=\"emeil\"\r\n                android:inputType=\"textWebEmailAddress\"\r\n                android:padding=\"8dp\"\r\n                android:textSize=\"24dp\"></EditText>\r\n\r\n\r\n            <EditText\r\n                android:id=\"@+id/giris_sifre\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_below=\"@+id/giris_email\"\r\n                android:layout_alignParentStart=\"true\"\r\n                android:layout_marginStart=\"3dp\"\r\n                android:layout_marginLeft=\"15dp\"\r\n\r\n                android:layout_marginTop=\"24dp\"\r\n                android:layout_marginRight=\"15dp\"\r\n                android:background=\"@drawable/girdiler\"\r\n                android:drawableStart=\"@drawable/ic_baseline_lock_open_24\"\r\n                android:hint=\"password\"\r\n                android:inputType=\"textPassword\"\r\n                android:padding=\"8dp\"\r\n                android:textSize=\"24dp\"></EditText>\r\n\r\n            <Button\r\n                android:id=\"@+id/giris_butonu\"\r\n                android:layout_width=\"200dp\"\r\n                android:layout_height=\"50dp\"\r\n                android:layout_below=\"@+id/giris_sifre\"\r\n                android:layout_marginLeft=\"100dp\"\r\n                android:layout_marginTop=\"11dp\"\r\n                android:background=\"@drawable/buttonlar\"\r\n                android:text=\"login\"\r\n                android:textSize=\"25dp\"></Button>\r\n\r\n            <TextView\r\n                android:id=\"@+id/giris_unutma_baglantisi\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_below=\"@+id/giris_butonu\"\r\n                android:layout_alignParentStart=\"true\"\r\n                android:layout_marginStart=\"3dp\"\r\n\r\n                 android:layout_marginLeft=\"90dp\"\r\n                android:layout_marginTop=\"24dp\"\r\n                android:layout_marginRight=\"15dp\"\r\n\r\n                android:textAlignment=\"center\"\r\n\r\n                android:padding=\"8dp\"\r\n                android:text=\"i forget password?\"\r\n                android:textSize=\"24dp\"></TextView>\r\n\r\n\r\n            <TextView\r\n                android:id=\"@+id/yeni_hesap_alma\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_below=\"@+id/giris_unutma_baglantisi\"\r\n                android:layout_alignParentStart=\"true\"\r\n                android:layout_marginStart=\"3dp\"\r\n                android:layout_marginLeft=\"15dp\"\r\n                android:layout_marginTop=\"24dp\"\r\n                android:layout_marginRight=\"15dp\"\r\n\r\n                android:padding=\"8dp\"\r\n                android:text=\"don't you have account\"\r\n                android:textSize=\"24dp\"\r\n                android:textAlignment=\"center\"></TextView>\r\n\r\n\r\n            <TextView\r\n                android:id=\"@+id/kullanarak_giris\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_below=\"@+id/yeni_hesap_alma\"\r\n                android:layout_alignParentStart=\"true\"\r\n                android:layout_marginStart=\"3dp\"\r\n                android:layout_marginLeft=\"15dp\"\r\n                android:layout_marginTop=\"24dp\"\r\n                android:layout_marginRight=\"15dp\"\r\n\r\n                android:padding=\"8dp\"\r\n                android:text=\"yada su sekilde giris yapin\"\r\n                android:textSize=\"24dp\"\r\n                android:textAlignment=\"center\"></TextView>\r\n\r\n            <Button\r\n                android:id=\"@+id/telefonla_giris_butonu\"\r\n                android:layout_width=\"400dp\"\r\n                android:layout_height=\"50dp\"\r\n                android:layout_below=\"@+id/kullanarak_giris\"\r\n\r\n                android:layout_marginTop=\"11dp\"\r\n                android:background=\"@drawable/buttonlar\"\r\n                android:drawableStart=\"@drawable/ic_baseline_phone_iphone_24\"\r\n                android:text=\"telefonla giris\"\r\n                android:textSize=\"20dp\"\r\n                android:layout_marginLeft=\"5dp\"></Button>\r\n\r\n        </RelativeLayout>\r\n    </ScrollView>\r\n</RelativeLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_login.xml b/app/src/main/res/layout/activity_login.xml
+--- a/app/src/main/res/layout/activity_login.xml	(revision d2e23d8c0a0dbb64bd10f12865dfddc33d4da82b)
++++ b/app/src/main/res/layout/activity_login.xml	(date 1649237771695)
+@@ -72,7 +72,7 @@
+                 android:textSize="25dp"></Button>
+ 
+             <TextView
+-                android:id="@+id/giris_unutma_baglantisi"
++                android:id="@+id/sifre_unutma_baglantisi"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/giris_butonu"
+@@ -94,7 +94,7 @@
+                 android:id="@+id/yeni_hesap_alma"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+-                android:layout_below="@+id/giris_unutma_baglantisi"
++                android:layout_below="@+id/sifre_unutma_baglantisi"
+                 android:layout_alignParentStart="true"
+                 android:layout_marginStart="3dp"
+                 android:layout_marginLeft="15dp"
+Index: app/src/main/java/com/example/whatsapp/LoginActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.whatsapp;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\n\r\nimport com.google.firebase.internal.api.FirebaseNoSignedInUserException;\r\n\r\npublic class LoginActivity<FirebaseUser> extends AppCompatActivity {\r\n\r\n\r\n    private FirebaseUser mevcutKullanici;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_login);\r\n    }\r\n\r\n    @Override\r\n    protected void onStart() {\r\n        super.onStart();\r\n        if(mevcutKullanici!=null){\r\n            KullaniciyiAnaAktiviteyeGonder();\r\n        }\r\n    }\r\n\r\n    private void KullaniciyiAnaAktiviteyeGonder() {\r\n        Intent AnaAktiviteIntent=new Intent(LoginActivity.this,MainActivity.class);\r\n        startActivity(AnaAktiviteIntent);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/whatsapp/LoginActivity.java b/app/src/main/java/com/example/whatsapp/LoginActivity.java
+--- a/app/src/main/java/com/example/whatsapp/LoginActivity.java	(revision d2e23d8c0a0dbb64bd10f12865dfddc33d4da82b)
++++ b/app/src/main/java/com/example/whatsapp/LoginActivity.java	(date 1649749633208)
+@@ -1,30 +1,124 @@
+ package com.example.whatsapp;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.app.ProgressDialog;
+ import android.content.Intent;
+ import android.os.Bundle;
++import android.text.TextUtils;
++import android.view.View;
++import android.widget.Button;
++import android.widget.EditText;
++import android.widget.TextView;
++import android.widget.Toast;
+ 
+-import com.google.firebase.internal.api.FirebaseNoSignedInUserException;
++import com.google.android.gms.tasks.OnCompleteListener;
++import com.google.android.gms.tasks.Task;
++import com.google.firebase.auth.AuthResult;
++import com.google.firebase.auth.FirebaseAuth;
++import com.google.firebase.auth.FirebaseUser;
+ 
+-public class LoginActivity<FirebaseUser> extends AppCompatActivity {
++public class LoginActivity extends AppCompatActivity {
+ 
++   private Button girisButonu,telefonlaGirisButonu;
++   private EditText KullaniciMail,KullaniciSifre;
++   private TextView YeniHesabAlma,SifreUnutmaBaglanti;
+ 
+-    private FirebaseUser mevcutKullanici;
++   //firebase
++   // private FirebaseUser mevcutKullanici;
++  private FirebaseAuth mYetki;
++    //progress
++    ProgressDialog girisDiolag;
++
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_login);
+-    }
++        //kontrol tanimlamalari
++        girisButonu=findViewById(R.id.giris_butonu);
++        telefonlaGirisButonu=findViewById(R.id.telefonla_giris_butonu);
++        KullaniciMail=findViewById(R.id.giris_email);
++        KullaniciSifre=findViewById(R.id.giris_sifre);
++        YeniHesabAlma=findViewById(R.id.yeni_hesap_alma);
++        SifreUnutmaBaglanti=findViewById(R.id.sifre_unutma_baglantisi);
++
++
++        //progress
++        girisDiolag=new ProgressDialog(this);
++
++        //firebase
++        mYetki=FirebaseAuth.getInstance();
++
++       // mevcutKullanici=mYetki.getCurrentUser();
++
++
++        YeniHesabAlma.setOnClickListener((v)-> {
++
++            Intent kayitActivityIntent=new Intent(LoginActivity.this,KayitAktivity.class);
++            startActivity(kayitActivityIntent);
+ 
+-    @Override
+-    protected void onStart() {
+-        super.onStart();
+-        if(mevcutKullanici!=null){
+-            KullaniciyiAnaAktiviteyeGonder();
++        });
++
++    girisButonu.setOnClickListener(new View.OnClickListener() {
++        @Override
++        public void onClick(View v) {
++            KullaniciyaGirisIzniVer();
++        }
++    });
++    }
++
++    private void KullaniciyaGirisIzniVer() {
++
++        String email=KullaniciMail.getText().toString();
++        String sifre=KullaniciSifre.getText().toString();
++        if(TextUtils.isEmpty(email)){
++            Toast.makeText(this, "please enter a valid email", Toast.LENGTH_SHORT).show();
++        }
++
++
++        if(TextUtils.isEmpty(sifre)){
++            Toast.makeText(this, "please enter a valid password", Toast.LENGTH_SHORT).show();
+         }
++        else{
++            //progress
++           girisDiolag.setTitle("giris yapiliyor");
++           girisDiolag.setMessage("please wait!");
++           girisDiolag.setCanceledOnTouchOutside(true);
++           girisDiolag.show();
++//giris
++          mYetki.signInWithEmailAndPassword(email,sifre).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
++     @Override
++     public void onComplete(@NonNull Task<AuthResult> task) {
++
++         if(task.isSuccessful()){
++
++             Intent anasayfa=new Intent(LoginActivity.this,MainActivity.class);
++             anasayfa.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
++             startActivity(anasayfa);
++             Toast.makeText(LoginActivity.this, "log in successful", Toast.LENGTH_SHORT).show();
++             girisDiolag.dismiss();
++         }
++         else
++         {
++             String mesaj=task.getException().toString();
++             Toast.makeText(LoginActivity.this, "error "+mesaj+" check info again", Toast.LENGTH_SHORT).show();
++             girisDiolag.dismiss();
++         }
++     }
++ });
++
++        }
+     }
++
++//    @Override
++//    protected void onStart() {
++//        super.onStart();
++//        if(mevcutKullanici!=null){
++//            KullaniciyiAnaAktiviteyeGonder();
++//        }
++//    }
+ 
+     private void KullaniciyiAnaAktiviteyeGonder() {
+         Intent AnaAktiviteIntent=new Intent(LoginActivity.this,MainActivity.class);
